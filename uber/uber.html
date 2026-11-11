@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      * {
+         margin: 0;
+         box-sizing: border-box;
+      }
+
+      .navbar {
+         background: black;
+         height: 80px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 10px;
+      }
+
+      .item {
+         color: white;
+         font-weight: 700;
+         padding: 10px;
+         text-decoration: none;
+      }
+
+      .navbar1 {
+         display: flex;
+         align-items: center;
+         gap: 20px;
+      }
+
+      .navbar2 {
+         display: flex;
+         align-items: center;
+         gap: 20px;
+      }
+
+      .item:hover {
+         background-color: rgb(46, 38, 38);
+         border-radius: 40px;
+      }
+
+      #signup {
+         background-color: white;
+         color: black;
+         border-radius: 40px;
+      }
+
+      .uber-page {
+         width: 100%;
+         padding: 30px 5%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .uber-h1 {
+         font-size: 50px;
+      }
+
+      .input-1 {
+         width: 45%;
+         display: flex;
+         flex-direction: column;
+         align-items: start;
+         gap: 10px;
+      }
+
+      .input-2 {
+         width: 40%;
+
+      }
+
+      .image1 {
+         width: 100%;
+         border-radius: 5px;
+         height: 300px;
+      }
+
+      .pickup {
+         padding: 10px 5px;
+         display: block;
+         border-radius: 5px;
+         width: 90%;
+         background-color: rgb(234, 234, 247);
+
+      }
+
+      .date-cont {
+         width: 90%;
+         display: flex;
+         justify-content: space-between;
+         text-align: center;
+
+      }
+
+      .date {
+         display: block;
+         padding: 10px 30px;
+         width: calc(100% /2 5px);
+         border-radius: 5px;
+         background-color: rgb(234, 234, 247);
+      }
+
+      .button-container {
+         width: 100%;
+         display: flex;
+         gap: 10px;
+         align-items: center;
+      }
+
+      .submit-button {
+         padding: 10px;
+         background-color: black;
+         color: white;
+         border-radius: 5px;
+         border: none;
+      }
+
+      .anchor {
+         color: black;
+         text-underline-offset: 5px;
+      }
+
+      .suggesion {
+         width: 100%;
+         padding: 30px 5%;
+      }
+
+      .suggesion-h1 {
+         font-size: 50px;
+      }
+
+      .card-sec {
+         width: 80%;
+         display: flex;
+         justify-content: space-around;
+         margin-top: 5px;
+         gap: 20px;
+         padding: 20px;
+         align-items: center;
+      }
+
+      .card {
+         height: 100px;
+         background-color: rgb(234, 234, 247);
+         border-radius: 5px;
+         font-size: 30px;
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         display: block;
+      }
+
+      .ride {
+         font-size: 20px;
+         margin: 10px;
+      }
+
+      .reserve {
+         font-size: 20px;
+         margin: 10px;
+      }
+
+      .intercity {
+         font-size: 20px;
+         margin: 10px;
+      }
+
+      .login-page {
+         width: 100%;
+         padding: 30px 5%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+      }
+
+      .login-h1 {
+         font-size: 30px;
+      }
+
+      .login-1,
+      .login-2 {
+         width: 40%;
+      }
+
+      .login-p {
+         margin-top: 30px;
+         font-size: 20px;
+      }
+
+      .login-button {
+         padding: 20px;
+         background-color: black;
+         color: white;
+         border-radius: 5px;
+         border: none;
+         margin-top: 20px;
+      }
+
+      .login-image {
+         width: 50%;
+         border-radius: 5px;
+         height: 500px;
+
+      }
+
+      .login-anchor {
+         color: black;
+         text-underline-offset: 5px;
+         display: block;
+         margin-top: 20px;
+      }
+
+      .plan {
+         width: 100%;
+         padding: 30px 5%;
+         justify-content: space-between;
+         align-items: center;
+         margin-top: 20px;
+         display: flex;
+
+      }
+
+      .plan-h1 {
+         font-size: 40px;
+         padding: 30px 5%;
+         justify-content: space-between;
+         align-items: center;
+         margin-top: 20px;
+         display: flex;
+      }
+
+      .plan-main {
+         background: rgb(171, 230, 245);
+         width: 50%;
+         padding: 10px;
+         margin: 20px;
+         border-radius: 5px;
+         max-width: 800px;
+         margin-top: 10px;
+         display: flex;
+         align-items: flex-end;
+         /* justify-content: center; */
+         gap: 30px;
+      }
+
+      .p-head {
+         margin: 0%;
+         max-width: 300px;
+         padding-right: 20px;
+      }
+
+      .ph2 {
+         font-size: 30px;
+         font-weight: 700;
+         align-items: center;
+         flex-direction: column;
+         display: flex;
+      }
+
+      .d-t {
+         margin: 5px;
+         font-size: 20px;
+         display: block;
+         padding: 10px 30px;
+         width: calc(100% /2 5px);
+         border-radius: 5px;
+      }
+
+      .formsec {
+         padding: 10px;
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+      }
+
+      .but-next {
+         width: 100%;
+         margin-top: 10px;
+         display: flex;
+         gap: 10px;
+         align-items: center;
+         padding: 10px;
+         background-color: black;
+         color: white;
+         border-radius: 5px;
+         border: none;
+      }
+
+      .benifitcont {
+         width: 350px;
+         padding: 20px;
+         border-radius: 12px;
+         background-color: white;
+         color: #0c0c0c;
+         border: #0c0c0c solid 1px;
+      }
+
+      .benifitcont h3 {
+         font-size: 30px;
+         margin-bottom: 20px;
+      }
+
+      .bnftlist {
+         padding: 0;
+         margin: 0;
+
+      }
+
+      .bnftlist li {
+         display: flex;
+         align-items: center;
+         margin-bottom: 12px;
+         font-size: 15px;
+         border-style: none none solid;
+      }
+
+      .bnft-text {
+         font-size: 20px;
+      }
+
+      .calender,
+      .clock,
+      .cancel {
+         display: inline-block;
+         width: 20px;
+         height: 20px;
+         margin-right: 10px;
+         background-size: contain;
+
+      }
+
+      .term-link {
+         display: block;
+         margin-top: 10px;
+         font-size: 20px;
+         color: black;
+      }
+
+
+      .business-page {
+         width: 100%;
+         padding: 30px 5%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+      }
+
+      .business-h1 {
+         font-size: 30px;
+      }
+
+      .business-1,
+      .business-2 {
+         width: 40%;
+      }
+
+      .business-p {
+         margin-top: 30px;
+         font-size: 20px;
+      }
+
+      .business-button {
+         padding: 20px;
+         background-color: black;
+         color: white;
+         border-radius: 5px;
+         border: none;
+         margin-top: 20px;
+      }
+
+      .business-image {
+         width: 50%;
+         border-radius: 5px;
+         height: 400px;
+      }
+      
+      .business-anchor {
+         color: black;
+         text-underline-offset: 5px;
+         display: block;
+         margin-top: 20px;
+      }
+
+      .driven-page {
+         width: 100%;
+         padding: 30px 5%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+      }
+
+      .driven-h1 {
+         font-size: 30px;
+      }
+
+      .driven-2 {
+         width: 40%;
+      }
+
+      .driven-p {
+         margin-top: 30px;
+         font-size: 20px;
+      }
+
+      .driven-button {
+         padding: 20px;
+         background-color: black;
+         color: white;
+         border-radius: 5px;
+         border: none;
+         margin-top: 20px;
+      }
+
+      .driven-image {
+         border-radius: 5px;
+         height: 400px;
+
+      }
+
+      .driven-anchor {
+         color: black;
+         text-underline-offset: 5px;
+         display: block;
+         margin-top: 20px;
+      }
+
+      .money-page {
+         width: 100%;
+         padding: 30px 5%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+      }
+
+      .money-h1 {
+         font-size: 30px;
+      }
+
+      .money-1,
+      .money-2 {
+         width: 40%;
+      }
+
+      .money-p {
+         margin-top: 30px;
+         font-size: 20px;
+      }
+
+      .money-button {
+         padding: 20px;
+         background-color: black;
+         color: white;
+         border-radius: 5px;
+         border: none;
+         margin-top: 20px;
+      }
+
+      .money-image {
+         width: 40%;
+         border-radius: 5px;
+         height: 400px;
+
+      }
+   </style>
+</head>
+
+<body>
+   <div class="navbar">
+      <div class="navbar1">
+         <a href="" class="item">Uber</a>
+         <a href="" class="item">ride</a>
+         <a href="" class="item">drive</a>
+         <a href="" class="item">business</a>
+         <a href="" class="item">about</a>
+      </div>
+      <div class="navbar2">
+         <a href="" class="item">En</a>
+         <a href="" class="item">help</a>
+         <a href="" class="item">login</a>
+         <a href="" class="item" id="signup">signup</a>
+      </div>
+   </div>
+   <div class="uber-page">
+      <form class="input-1">
+         <h1 class="uber-h1">Go Anywhere With Uber</h1>
+         <input type="text" class="pickup" placeholder="pickup">
+         <input type="text" class="pickup" placeholder="dropoff">
+         <div class="date-cont">
+            <input type="text" class="date" placeholder="today">
+            <input type="text" class="date" placeholder="now">
+         </div>
+         <div class="button-container">
+            <button type="submit" class="submit-button">Submit</button>
+            <a href="" class="anchor">Login to see your recent activity</a>
+         </div>
+      </form>
+      <div class="input-2">
+         <img src="./images/uber.webp" class="image1" alt="">
+      </div>
+   </div>
+   <div class="suggesion">
+      <h1 class="suggesion-h1">Suggesion</h1>
+      <div class="card-sec">
+         <div class="card">Ride
+            <div class="ride">Go anywhere with Uber. Request a ride, hop in, and go.</div>
+         </div>
+         <div class="card">Reserve
+            <div class="reserve">Go anywhere with Uber. Request a ride, hop in, and go.</div>
+         </div>
+         <div class="card">Intercity
+            <div class="intercity">Go anywhere with Uber. Request a ride, hop in, and go.</div>
+         </div>
+      </div>
+   </div>
+   </div>
+   </div>
+   <div class="login-page">
+      <div class="login-1">
+         <h1 class="login-h1">Login To See Your Recent Activity</h1>
+         <p class="login-p">View past trips, tailored suggesion, support resources, and more.</p>
+         <button class="login-button">Log in to your account</button>
+         <a href="" class="login-anchor">Dont have an Uber account? Sign up</a>
+      </div>
+      <div class="login-2"></div>
+      <img src="./images/day of delivery.jpg" class="login-image" alt="">
+   </div>
+   <div class="plan-1">
+      <h1 class="plan-h1">Plan for later</h1>
+   </div>
+   <div class="plan">
+
+      <div class="plan-main">
+         <div class="p-head">
+            <h2 class="ph2">Get your ride right with Uber Reserve</h2>
+            <p class="d-t"> choose date and time </p>
+            <form class="formsec">
+               <input type="text" class="date" type="date" placeholder="date">
+               <input type="text" class="date" placeholder="time">
+               <button type="Next" class="but-next"> Next</button>
+            </form>
+         </div>
+      </div>
+
+      <div class="benifitcont">
+         <h3>Benifits</h3>
+         <div class="bnftlist">
+            <li>
+               <div class="calender">
+                  <img alt=""
+                     src="https://www.uber-assets.com/image/upload/v1542247607/assets/e1/2eddee-f082-49f7-a5fc-22c17977de50/original/calendar-filled.svg"
+                     alt="image">
+               </div>
+               <h2 class="bnft-text"> choose your exact pic up time up to 90 days in advance. </h2>
+
+            </li>
+            <li>
+               <div class="clock">
+                  <img
+                     src="https://www.uber-assets.com/image/upload/v1535564184/assets/30/f5ecd4-8ccf-44d0-9976-2833f69df8a9/original/anytime.svg"
+                     alt="image">
+               </div>
+               <h2 class="bnft-text">Extra wait time included to meet your ride.</h2>
+            </li>
+            <li>
+               <div class="cancel">
+                  <img
+                     src="https://www.uber-assets.com/image/upload/v1535564184/assets/30/f5ecd4-8ccf-44d0-9976-2833f69df8a9/original/anytime.svg"
+                     alt="image">
+               </div>
+               <h2 class="bnft-text"> Cancel at no charge up to 60 minutes in advance.</h2>
+            </li>
+            <a href="see-term" class="term-link">see term</a>
+         </div>
+      </div>
+   </div>
+   </div>
+   <div class="driven-page">
+      <div class="driven-1">
+         <img src="./images/Uber Looks To Add Flights.jpg" class="driven-image" alt="">
+      </div>
+      <div class="driven-2">
+         <h1 class="driven-h1">Drive when you want, make what you need</h1>
+         <p class="driven-p">Make money on your schedule with deliveries or rides—or both.
+            You can use your own car or choose a rental through Uber.</p>
+         <button class="driven-button">Get started</button>
+         <a href="" class="driven-anchor">already have an account? sign in </a>
+      </div>
+   </div>
+
+
+   <div class="business-page">
+      <div class="business-1">
+         <h1 class="business-h1">The Uber you know, reimagined for business</h1>
+         <p class="business-p">Uber for Business is a platform for managing global
+            rides and meals, and local
+            deliveries, for companies of any size.</p>
+         <button class="business-button">Get started</button>
+         <a href="" class="business-anchor">check out our solution</a>
+      </div>
+      <div class="business-2"></div>
+      <img src="./images/8 Best Car.jpg" class="business-image" alt="">
+   </div>
+
+
+   <div class="money-page">
+      <div class="money-1">
+         <h1 class="money-h1">Make money by renting out your car</h1>
+         <p class="money-p">Connect with thousands of drivers and earn more per week with
+            Uber’s free fleet management tools.</p>
+         <button class="money-button">Get started</button>
+      </div>
+      <div class="money-2"></div>
+      <img src="./images/How to Become an Uber Driver.jpg" class="money-image" alt="">
+   </div>
+
+</body>
+
+</html>
